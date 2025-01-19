@@ -3,4 +3,19 @@ kind: ReplicaSet
 metadata:
   name: ReplicaSet1
   labels:
-    name: ReplicaSet1
+    app: myapp
+spec:
+  selector:
+    matchLabels:
+      app: myapp
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        name: "POD1"
+        app: myapp
+    spec:
+      containers:
+        - name: "POD1"
+          image: nginx
+  

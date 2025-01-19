@@ -3,6 +3,7 @@ kind: Pod
 metadata:
   labels:
     name: "POD1"
+    app: myapp
 spec:
   containers:
     - name: "POD1"
