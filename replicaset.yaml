@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: ReplicaSet1
+  name: myreplicaset
   labels:
     app: myapp
 spec:
@@ -12,10 +12,10 @@ spec:
   template:
     metadata:
       labels:
-        name: "POD1"
+        name: mypod
         app: myapp
     spec:
       containers:
-        - name: "POD1"
+        - name: mypod
           image: nginx
   
