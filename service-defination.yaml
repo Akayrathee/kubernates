@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: myapp-service
 spec:
-  type: NodePort
+  type: NodePort  # If we specify the clusterIP then we don't need nodeport in line number 10
   ports:
     - port: 80
       targetPort: 80
